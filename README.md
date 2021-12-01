@@ -1,5 +1,6 @@
 # Airtable JS Functions
-**Function getAllDataFromTable**
+>**Function getAllDataFromTable**
+
 Allow to fetch/get all data from table with using views. By default you need to pass some of the parameters when you call it.
   
   ```let tableObj = base.getTable("Table-Name");
