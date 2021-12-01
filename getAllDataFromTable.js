@@ -9,15 +9,7 @@ const getAllDataFromTable = async function (obj) {
     //console.log(queryResult);
     let records = queryResult.records;
     for (let rec of records) {
-        if (typeof obj.filters != 'undefined') {
-            let { field, action } = obj.filters;
-            let filterFieldValue = rec.getCellValue(field);
-            if (action === "isNotEmpty") {
-                if (filterFieldValue !== null) {
-                    continue;
-                }
-            }
-        }
+        
         let row = [];
         row["recId"] = rec.id;
         for (let field of obj.fields) {
