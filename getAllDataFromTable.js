@@ -1,3 +1,9 @@
+/**
+ * Returns all data from the table based on specific fields.
+ * 
+ * @param {Object} obj with The paramters {"table": TableObject, fields: [{fieldList}], "view": viewName }.
+ * @return {Array} data raised to the n-th power.
+ */
 const getAllDataFromTable = async function (obj) {
     let data = [], queryResult;
     if (typeof obj.view !== 'undefined') {
@@ -8,8 +14,7 @@ const getAllDataFromTable = async function (obj) {
     }
     //console.log(queryResult);
     let records = queryResult.records;
-    for (let rec of records) {
-        
+    for (let rec of records) {        
         let row = [];
         row["recId"] = rec.id;
         for (let field of obj.fields) {
