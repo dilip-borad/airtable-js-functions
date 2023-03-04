@@ -15,3 +15,19 @@ Allow to fetch/get all data from table with using views. By default you need to 
     ]
   });
   ```
+  >**Function makeAPIRequest**
+
+Make simple API request
+  
+  ```
+  let body = {"requestKey":"requestValue"};
+  let response = await makeAPIRequest({
+    url: `url of the API`,
+        method: "Request Method",
+        headers: {
+            'Authorization': `Bearer api-key`,
+            'Content-Type': 'application/json'
+        },
+        body: body
+  });
+  ```
