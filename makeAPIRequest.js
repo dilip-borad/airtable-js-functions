@@ -15,7 +15,7 @@ const makeAPIRequest = async function (obj) {
     }
     output.markdown(`Make request on \`${obj.url}\``);
     //console.log(obj);    
-    response = await remoteFetchAsync(obj.url, options);
+    response = await fetch(obj.url, options);
     response = await response.json();
     return response;
 }
